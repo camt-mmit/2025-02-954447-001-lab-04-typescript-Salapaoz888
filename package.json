@@ -3,20 +3,25 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "homepage": "https://github.com/camt-mmit/2025-02-954447-001-lab-04-typescript-Salapaoz888",
   "scripts": {
-"watch-file": "copy-and-watch --watch src/**/*.{html,css} dist/",
-"watch-ts": "tsc --watch --preserveWatchOutput",
-"watch": "concurrently \"yarn:watch-*\"",
-"init-target": "copy-and-watch --clean src/**/*.{html,css} dist/",
-"lint": "prettier --check src/**/*ts && eslint src/**/*.ts",
-"build": "yarn run lint && yarn run init-target && tsc"
-},
+    "watch-file": "copy-and-watch --watch src/**/*.{html,css} dist/",
+    "watch-ts": "tsc --watch --preserveWatchOutput",
+    "watch": "concurrently \"yarn:watch-*\"",
+    "init-target": "copy-and-watch --clean src/**/*.{html,css} dist/",
+    "lint": "prettier --check src/**/*ts && eslint src/**/*.ts",
+    "build": "yarn run lint && yarn run init-target && tsc",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d dist"
+  },
   "devDependencies": {
     "@eslint/js": "^9.39.2",
     "concurrently": "^9.2.1",
     "copy-and-watch": "^0.1.8",
     "eslint": "^9.39.2",
+    "gh-pages": "^6.3.0",
     "globals": "^17.0.0",
+    "prettier": "^3.7.4",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.52.0"
   }
